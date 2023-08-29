@@ -1,0 +1,626 @@
+:root {
+  --bg_color: #3a3939;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  gap: 1em;
+  margin: 1em;
+  background: #07503c;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  gap: 3em;
+  border-radius: 1em;
+  background: var(--bg_color);
+  color: white;
+  position: relative;
+}
+
+nav .logo {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-self: center;
+}
+
+nav .logo img {
+  height: 4em;
+  width: 4em;
+}
+nav .logo h4 {
+  display: none;
+}
+
+nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+
+nav .nav-links li {
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+nav .nav-links li:hover {
+  color: #12eb7f;
+}
+
+nav .developed {
+  transform: rotate(-89deg);
+  width: 13em;
+  position: absolute;
+  bottom: 123px;
+  right: -45px;
+  color: #1afb80;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+}
+
+main .section1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+  color: white;
+  position: relative;
+}
+
+main .section1 input {
+  border: none;
+  color: white;
+  caret-color: white;
+  outline-color: black;
+  outline-width: 1em;
+  padding: 5px 4em 5px 3em;
+  border-radius: 7px;
+  height: 3em;
+  background: var(--bg_color);
+}
+
+main .section1 input::placeholder {
+  color: white;
+}
+
+main .section1 .search {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+main .section1 .burger {
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  left: 13px;
+  display: none;
+}
+
+main .section1 #toast-container {
+  position: fixed;
+  bottom: 2em;
+  right: 20px;
+  z-index: 1;
+  width: 88%;
+}
+
+main .section1 #toast-container #toast {
+  background-color: #f83f3f;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+main .section1 .weatherInfo {
+  display: flex;
+  justify-content: space-around;
+  height: 16em;
+}
+
+main .section1 .weatherInfo .weatherInfo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+}
+main .section1 .weatherInfo .weatherInfo-text h3 {
+  font-size: 2.5em;
+}
+
+main .section1 .weatherInfo .weatherInfo-img {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-self: center;
+}
+
+main .section1 .weatherInfo .weatherInfo-img img {
+  height: 10em;
+  width: 10em;
+}
+
+main .todaysForcast {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: #3a3939;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+  border-radius: 1em;
+}
+
+main .todaysForcast .container {
+  display: flex;
+  gap: 2em;
+  width: 100%;
+  justify-content: center;
+}
+
+main .todaysForcast h4 {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  justify-content: center;
+  font-size: 20px;
+}
+
+main .todaysForcast .container .forecastItems {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 42%;
+}
+
+main .todaysForcast .container .forecastItems .forecastItem {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 10px;
+}
+
+main .todaysForcast .container .forecastItems .forecastItem h5 {
+  display: flex;
+  align-self: center;
+}
+main .todaysForcast .container .forecastItems .forecastItem img {
+  height: 2em;
+  width: 3em;
+  display: flex;
+  align-self: center;
+}
+main .todaysForcast .container .forecastItems .forecastItem h3 {
+  display: flex;
+  align-self: center;
+}
+
+main .air_condition {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 10em;
+  background: var(--bg_color);
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+main .air_condition h4 {
+  display: flex;
+  width: 94%;
+  height: 2em;
+  justify-content: center;
+  align-items: end;
+  font-size: 20px;
+}
+
+main .air_condition .container {
+  display: flex;
+  width: 92%;
+  gap: 2em;
+  justify-content: center;
+}
+
+main .air_condition .items1 {
+  display: flex;
+  gap: 2em;
+  width: 82%;
+  height: 5em;
+}
+
+main .air_condition .items1 .item {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  justify-content: center;
+}
+
+main .air_condition .items1 .item .icon {
+  height: fit-content;
+  width: fit-content;
+}
+
+main .air_condition .items1 .item .icon img {
+  height: 2em;
+  width: 2em;
+}
+
+main .air_condition .items1 .item .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .air_condition .items1 .item .content h5 {
+}
+
+main .air_condition .items1 .item .content h3 {
+}
+
+main .section2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--bg_color);
+  border-radius: 1em;
+  color: white;
+}
+
+main .section2 .title {
+  display: flex;
+  height: 3em;
+  align-items: center;
+  font-size: 20px;
+  align-self: center;
+  width: 30%;
+  justify-content: center;
+  font-weight: bold;
+}
+
+main .section2 .forecast_items {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+  align-self: center;
+}
+
+main .section2 .forecast_items .item {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .section2 .forecast_items .item h4 {
+  display: flex;
+  align-items: center;
+}
+
+main .section2 .forecast_items .item img {
+  height: 3em;
+  width: 3em;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* nav .logo h4 {
+    opacity: 1;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+  } */
+  main .todaysForcast h4 {
+    width: 34%;
+  }
+
+  main .section2 .title {
+    width: 37%;
+  }
+
+  main .todaysForcast .container .forecastItems {
+    width: 44%;
+  }
+
+  main .todaysForcast .container .forecastItems .forecastItem h5 {
+    display: flex;
+    align-self: center;
+    font-size: 9px;
+  }
+}
+
+/******  Laptop ******/
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    gap: 1em;
+  }
+  /* .navbar {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    top: 4em;
+    opacity: 1;
+    transition: 1s ease-in-out;
+  }
+
+  nav .logo {
+    width: 100%;
+    justify-content: center;
+    height: 12em;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  nav .logo h4 {
+    opacity: 0;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+  }
+
+  nav .logo img {
+    opacity: 0;
+    transition: 1s ease-in-out;
+    width: 6em;
+    height: 6em;
+  }
+
+  nav .nav-links {
+    opacity: 0;
+    transition: 1s ease-in-out;
+  } */
+
+  main {
+    flex-direction: column;
+  }
+
+  main .section1 .burger {
+    display: none;
+  }
+
+  main .section1 .weatherInfo .weatherInfo-img img {
+    width: 8em;
+    height: 8em;
+  }
+
+  main .todaysForcast {
+    height: 19em;
+    gap: 2em;
+  }
+
+  main .todaysForcast .container {
+    flex-direction: column;
+  }
+
+  main .todaysForcast .container .forecastItems {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  main .todaysForcast h4 {
+    width: 34%;
+  }
+
+  main .air_condition h4 {
+    width: 83%;
+  }
+
+  main .section2 .title {
+    width: 28%;
+  }
+
+  main .section2 .forecast_items {
+    height: 36em;
+  }
+
+  main .section2 .forecast_items .item h4 {
+    font-size: 16px;
+  }
+}
+
+/******  iPads and Tablets ******/
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    gap: 1em;
+  }
+
+  nav .nav-links li {
+    font-size: 13px;
+  }
+
+  nav .developed {
+    right: -81px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main .section1 .burger {
+    display: none;
+  }
+
+  main .section1 .weatherInfo .weatherInfo-img img {
+    width: 8em;
+    height: 8em;
+  }
+
+  main .todaysForcast {
+    height: 19em;
+    gap: 2em;
+  }
+
+  main .todaysForcast .container {
+    flex-direction: column;
+  }
+
+  main .todaysForcast .container .forecastItems {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  main .todaysForcast h4 {
+    width: 46%;
+  }
+
+  main .air_condition h4 {
+    width: 83%;
+  }
+
+  main .section2 .title {
+    width: 37%;
+  }
+
+  main .section2 .forecast_items {
+    height: 36em;
+  }
+
+  main .section2 .forecast_items .item h4 {
+    font-size: 16px;
+  }
+}
+
+/*********   Mobile Device ****/
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    gap: 0;
+  }
+
+  .navbar {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 37em;
+    z-index: 1;
+    top: 4em;
+    opacity: 1;
+    transition: 1s ease-in-out;
+    background: var(--bg_color);
+  }
+
+  nav .logo {
+    width: 100%;
+    justify-content: center;
+    height: 12em;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  nav .logo h4 {
+    opacity: 0;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+  }
+
+  nav .logo img {
+    opacity: 0;
+    transition: 1s ease-in-out;
+    width: 6em;
+    height: 6em;
+  }
+  nav .logo h4 {
+    display: block;
+  }
+  nav .nav-links {
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+
+  nav .developed {
+    width: 100%;
+    color: #1afb80;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: none;
+    transition: 1s ease-in-out;
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+  }
+
+  /* nav .hide{
+    display: none;
+  } */
+  main {
+    flex-direction: column;
+  }
+
+  main .section1 .burger {
+    display: block;
+  }
+
+  main .section1 .weatherInfo .weatherInfo-img img {
+    width: 8em;
+    height: 8em;
+  }
+
+  main .todaysForcast {
+    height: 19em;
+    gap: 2em;
+  }
+
+  main .todaysForcast .container {
+    flex-direction: column;
+  }
+
+  main .todaysForcast .container .forecastItems {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  main .todaysForcast h4 {
+    width: 50%;
+  }
+
+  main .air_condition {
+    height: fit-content;
+  }
+
+  main .air_condition .container {
+    flex-direction: column;
+    height: 11em;
+    align-items: center;
+    gap: 0;
+  }
+
+  main .air_condition .container .items1 {
+    width: 100%;
+  }
+
+  main .section2 .title {
+    width: 50%;
+  }
+
+  main .section2 .forecast_items {
+    height: 36em;
+  }
+
+  main .section2 .forecast_items .item h4 {
+    font-size: 12px;
+  }
+}

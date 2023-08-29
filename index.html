@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./img/cloudy.png" alt="logo" />
+        <h4>Weather App</h4>
+      </div>
+      <ul class="nav-links ">
+        <li ><i class="fa-solid fa-cloud-sun-rain"></i>weather</li>
+        <li><i class="fa-solid fa-list-ul"></i>cities</li>
+        <li><i class="fa-solid fa-map"></i>map</li>
+        <li><i class="fa-solid fa-gear"></i>settings</li>
+      </ul>
+      <div class="developed">&copy; copyright by Abhishek R J</div>
+    </nav>
+    <main>
+      <section class="section1">
+        <i class="fa-solid fa-bars burger" onclick="drawer()"></i>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search for cities "
+        />
+        <i class="fa-solid fa-magnifying-glass search" onclick="search()"></i>
+        <div id="toast-container">
+          <div id="toast">abhishek</div>
+        </div>
+        <div class="weatherInfo">
+          <div class="weatherInfo-text">
+            <h3 id="place_name">Karwar, IN</h3>
+            <h3 id="place_temperature">21&deg;</h3>
+          </div>
+          <div class="weatherInfo-img">
+            <img src="./img/sun.png" alt="status" id="status" />
+          </div>
+        </div>
+        <div class="todaysForcast">
+          <h4>Todays Forecast</h4>
+          <div class="container">
+            <div class="forecastItems">
+              <div class="forecastItem">
+                <h5 id="time1">06:00</h5>
+                <img src="./img/rain.png" id="status1" />
+                <h3 id="temp1">25&deg;</h3>
+              </div>
+              <hr />
+              <div class="forecastItem">
+                <h5 id="time5">06:00</h5>
+                <img src="./img/rain.png" id="status5" />
+                <h3 id="temp5">25&deg;</h3>
+              </div>
+              <hr />
+              <div class="forecastItem">
+                <h5 id="time9">06:00</h5>
+                <img src="./img/rain.png" id="status9" />
+                <h3 id="temp9">25&deg;</h3>
+              </div>
+            </div>
+
+            <div class="forecastItems">
+              <div class="forecastItem">
+                <h5 id="time13">06:00</h5>
+                <img src="./img/rain.png" id="status13" />
+                <h3 id="temp13">25&deg;</h3>
+              </div>
+              <hr />
+              <div class="forecastItem">
+                <h5 id="time17">06:00</h5>
+                <img src="./img/rain.png" id="status17" />
+                <h3 id="temp17">25&deg;</h3>
+              </div>
+              <hr />
+              <div class="forecastItem">
+                <h5 id="time21">06:00</h5>
+                <img src="./img/rain.png" id="status21" />
+                <h3 id="temp21">25&deg;</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="air_condition">
+          <h4>Air Conditions</h4>
+          <div class="container">
+            <div class="items1">
+              <div class="item">
+                <div class="icon">
+                  <i class="fa-solid fa-temperature-full"></i>
+                </div>
+                <div class="content">
+                  <h5>Real Fuel</h5>
+                  <h3 id="real-temperature">30&deg;</h3>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon"><i class="fa-solid fa-wind"></i></div>
+                <div class="content">
+                  <h5>Wind</h5>
+                  <h3 id="wind">0.2 km/h</h3>
+                </div>
+              </div>
+            </div>
+            <div class="items1">
+              <div class="item">
+                <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+                <div class="content">
+                  <h5>Chance of rain</h5>
+                  <h3 id="rain_possi">0%</h3>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon"><i class="fa-solid fa-sun"></i></div>
+                <div class="content">
+                  <h5>UV Index</h5>
+                  <h3 id="uv">3</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section2">
+        <div class="title">7-day forecast</div>
+        <div class="forecast_items">
+          <div class="item">
+            <h4 id="item0">Today</h4>
+            <img src="./img/cloudy.png" id="img0" />
+            <h4 id="status0">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+          <div class="item">
+            <h4 id="item1">2023-08-27</h4>
+            <img src="./img/cloudy.png" id="img1" />
+            <h4 id="status1">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+          <div class="item">
+            <h4 id="item2">2023-08-28</h4>
+            <img src="./img/cloudy.png" id="img2" />
+            <h4 id="status2">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+          <div class="item">
+            <h4 id="item3">2023-08-29</h4>
+            <img src="./img/cloudy.png" id="img3" />
+            <h4 id="status3">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+          <div class="item">
+            <h4 id="item4">2023-08-30</h4>
+            <img src="./img/cloudy.png" id="img4" />
+            <h4 id="status4">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+          <div class="item">
+            <h4 id="item5">2023-08-31</h4>
+            <img src="./img/cloudy.png" id="img5" />
+            <h4 id="status5">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+          <div class="item">
+            <h4 id="item6">2023-09-01</h4>
+            <img src="./img/cloudy.png" id="img6" />
+            <h4 id="status6">Sunny</h4>
+            <h4>36/22</h4>
+          </div>
+          <hr />
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
